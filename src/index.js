@@ -1,6 +1,7 @@
 import _ from 'lodash'; //import external nnpm library dependencyg here
 import myName from './myName'; //ES6 module I made that I'm importing here
 import { functionOne, functionTwo } from './myNamedExport'; //named import
+import './style.css'; //importing style
 
 function component() {
     const element = document.createElement('div');
@@ -8,7 +9,8 @@ function component() {
     // Lodash, currently included via a script, is required for this line to work
         // update: Lodash is now imported by this script
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
+    element.classList.add("hello")
+
     return element;
   }
 
