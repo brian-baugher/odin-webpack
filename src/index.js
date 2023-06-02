@@ -2,6 +2,7 @@ import _ from 'lodash'; //import external nnpm library dependencyg here
 import myName from './myName'; //ES6 module I made that I'm importing here
 import { functionOne, functionTwo } from './myNamedExport'; //named import
 import './style.css'; //importing style
+import Icon from './icon.png' //import image
 
 function component() {
     const element = document.createElement('div');
@@ -19,6 +20,12 @@ function component() {
 
     //this uses the ES6 module I imported
     ele.textContent = myName('Brian')
+
+    const myIcon = new Image();
+    myIcon.src = Icon;
+
+    ele.appendChild(myIcon);
+
     return ele;
   }
   
