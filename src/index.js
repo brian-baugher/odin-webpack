@@ -2,7 +2,7 @@ import _ from 'lodash'; //import external nnpm library dependencyg here
 import myName from './myName'; //ES6 module I made that I'm importing here
 import { functionOne, functionTwo } from './myNamedExport'; //named import
 import './style.css'; //importing style
-import Icon from './icon.png' //import image
+import Icon from './icon.PNG' //import image
 // can also import fonts, data files, custom json like yaml
 import printMe from './print';
 
