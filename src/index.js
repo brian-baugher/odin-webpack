@@ -4,6 +4,7 @@ import { functionOne, functionTwo } from './myNamedExport'; //named import
 import './style.css'; //importing style
 import Icon from './icon.png' //import image
 // can also import fonts, data files, custom json like yaml
+import printMe from './print';
 
 function component() {
     const element = document.createElement('div');
@@ -12,6 +13,13 @@ function component() {
         // update: Lodash is now imported by this script
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     element.classList.add("hello")
+
+    const btn = document.createElement('button')
+
+    btn.innerHTML = 'Click me and check console'
+    btn.onclick = printMe;
+
+    element.appendChild(btn)
 
     return element;
   }
