@@ -9,6 +9,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
+      // https://medium.com/a-beginners-guide-for-webpack-2/index-html-using-html-webpack-plugin-85eabdb73474
+        //add template html
     }),
   ],
   output: {
@@ -16,6 +18,7 @@ module.exports = {
     //filename: 'bundle.js',
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true, // clears out old files 
   },
   module: {
     rules: [
